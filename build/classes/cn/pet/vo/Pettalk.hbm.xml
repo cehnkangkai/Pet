@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="cn.pet.vo.Pettalk" table="pettalk">
+		<id name="pettalk_id" column="pettalk_id">
+			<generator class="native"/>
+		</id>	
+		<property name="photoName" column="photoName"></property>
+		<property name="dt" column="dt"></property>
+		<property name="photoPath" column="photoPath"></property>
+		<property name="photoPathTwo" column="photoPathTwo"></property>
+		<property name="photoPathThere" column="photoPathThere"></property>
+		<property name="content" column="content"></property>
+		<many-to-one name="register" class="cn.pet.vo.Register" column="register_id" ></many-to-one>
+	</class>
+	
+	
+	
+
+</hibernate-mapping>    

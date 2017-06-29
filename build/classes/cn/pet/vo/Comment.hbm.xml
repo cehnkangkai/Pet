@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="cn.pet.vo.Comment" table="comment">
+		<id name="comment_id" column="comment_id">
+			<generator class="native"/>
+		</id>	
+		<property name="datetime" column="datetime"/>
+		<property name="pcontent" column="pcontent"/>
+		<property name="username" column="username"></property>	
+		<many-to-one name="pettalk" class="cn.pet.vo.Pettalk" column="pettalk_id" cascade="delete" ></many-to-one>
+	</class>
+	
+</hibernate-mapping>    

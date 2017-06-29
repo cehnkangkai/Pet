@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.pet.vo.User" table="user">
+		<id name="user_id" column="user_id">
+			<generator class="foreign">
+				<param name="property">register</param>
+			</generator>
+		</id>
+
+		<property name="signature" column="signature" />
+		<property name="userImag" column="userImag" />
+		<one-to-one name="register" class="cn.pet.vo.Register"
+			constrained="true"></one-to-one>
+			<!-- <set name="rypets">
+				<key column="user_id"></key>
+				<one-to-many class="cn.pet.vo.Rypet"/>
+			</set> -->
+	</class>
+
+</hibernate-mapping>    

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="book" extends="struts-default" namespace="/">
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		<action name="register_*" class="registerAction" method="{1}">
+			<result name="loginS">/index.jsp</result>
+			<result name="loginS2" type="chain">rypet_findPetAll</result>
+			<result name="loginS3" type="chain">rypet_findAll.action</result>
+			<result name="login">/login.jsp</result>
+			<result name="saveS" >/login.jsp</result>
+		</action>
+		<action name="rypet_*" class="rypetAction" method="{1}">
+			<result name="findAllS">/pet-claim.jsp</result>
+			<result name="savePetS" type="redirectAction">rypet_findPetAll.action</result>
+			<result name="adoptPetS" type="redirectAction">rypet_findPetAllAdopt.action</result>
+			<result name="findPetByIdS" >/pet-claim-details.jsp</result>
+			<result name="findPetAllAdoptS" >/adopt.jsp</result>
+			<result name="findAdoptByIdS" >/adopt-details.jsp</result>
+		</action>
+		<action name="lfpet_*" class="lForPetAction" method="{1}">
+			
+		</action>
+	</package>
+    
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="cn.pet.vo.LookForPet" table="lookForPet">
+		<id name="lookforpet_id" column="lookforpet_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="lookforBreed" column="lookforBreed"/>
+		<property name="lookforSort" column="lookforSort"/>
+		<property name="lookforAddr" column="lookforAddr"/>
+		<property name="lookforImag" column="lookforImag"/>
+		<property name="petPerson" column="petPerson"/>
+		<property name="petPersonLink" column="petPersonLink"/>
+		<many-to-one name="register" class="cn.pet.vo.Register" column="user_id"></many-to-one> 
+		
+	</class>
+	
+</hibernate-mapping>    

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="cn.pet.vo.Rypet" table="rypet">
+		<id name="rypet_id" column="rypet_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="petName" column="petName"/>
+		<property name="petSort" column="petSort"/>
+		<property name="petBreed" column="petBreed"/>
+		<property name="petSex" column="petSex"/>
+		<property name="petAge" column="petAge"/>
+		<property name="petWay" column="petWay"/>
+		<property name="petIntroduce" column="petIntroduce"/>
+		<property name="petLink" column="petLink"/>
+		<property name="petLinkNum" column="petLinkNum"/>
+		<property name="petLInkqq" column="petLInkqq"/>
+		<property name="petLinkWchat" column="petLinkWchat"/>
+		<property name="petFindImage" column="petFindImage"/>
+		<property name="petFindfimg" column="petFindfimg"/>
+		<property name="petFindfimg2" column="petFindfimg2"/>
+		
+		<property name="petFindAddr" column="petFindAddr"/>
+		<property name="petTitle" column="petTitle"/>
+		<property name="state" column="state"/>
+		<property name="petBody" column="petBody"/>
+		<property name="petHair" column="petHair"/>
+		<property name="userName" column="userName"/>
+		<property name="putTime" column="putTime"/>
+		<many-to-one name="register" class="cn.pet.vo.Register" column="user_id"></many-to-one> 
+		
+	</class>
+	
+</hibernate-mapping>    
